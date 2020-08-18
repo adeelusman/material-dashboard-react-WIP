@@ -3,8 +3,12 @@ import {
   whiteColor,
   hexToRgb
 } from "assets/jss/material-dashboard-react.js";
+import {
+  card
+} from "assets/jss/material-dashboard-react";
 
 const cardStyle = {
+
   card: {
     border: "0",
     marginBottom: "30px",

@@ -14,10 +14,16 @@ import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 
 import avatar from "assets/img/faces/marc.jpg";
+import {card} from "../../assets/jss/material-dashboard-react";
+import {number} from "prop-types";
 
 const styles = {
+/*
+  cardWidth: {
+    width: "150%"
+  },*/
   cardCategoryWhite: {
-    color: "rgba(255,255,255,.62)",
+    color: "rgba(255,255,255,0.62)",
     margin: "0",
     fontSize: "14px",
     marginTop: "0",
@@ -30,7 +36,7 @@ const styles = {
     fontWeight: "300",
     fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
     marginBottom: "3px",
-    textDecoration: "none"
+    textDecoration: "none",
   }
 };
 
@@ -41,14 +47,14 @@ export default function UserProfile() {
   return (
     <div>
       <GridContainer>
-        <GridItem xs={12} sm={12} md={8}>
-          <Card>
+        <GridItem xs={12} sm={12} md={12}>
+          <Card >
             <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Edit Profile</h4>
-              <p className={classes.cardCategoryWhite}>Complete your profile</p>
+              <h4 className={classes.cardTitleWhite}>Logging System</h4>
+              <p className={classes.cardCategoryWhite}>Enter details of the timber e.g Height, Width, etc.</p>
             </CardHeader>
             <CardBody>
-              <GridContainer>
+               <GridContainer>
                 <GridItem xs={12} sm={12} md={5}>
                   <CustomInput
                     labelText="Company (disabled)"
@@ -144,34 +150,14 @@ export default function UserProfile() {
                     }}
                   />
                 </GridItem>
-              </GridContainer>
+              </GridContainer> */
             </CardBody>
-            <CardFooter>
-              <Button color="primary">Update Profile</Button>
-            </CardFooter>
           </Card>
         </GridItem>
-        <GridItem xs={12} sm={12} md={4}>
           <Card profile>
             <CardAvatar profile>
-              <a href="#pablo" onClick={e => e.preventDefault()}>
-                <img src={avatar} alt="..." />
-              </a>
             </CardAvatar>
-            <CardBody profile>
-              <h6 className={classes.cardCategory}>CEO / CO-FOUNDER</h6>
-              <h4 className={classes.cardTitle}>Alec Thompson</h4>
-              <p className={classes.description}>
-                Don{"'"}t be scared of the truth because we need to restart the
-                human foundation in truth And I love you like Kanye loves Kanye
-                I love Rick Owens’ bed design but the back is...
-              </p>
-              <Button color="primary" round>
-                Follow
-              </Button>
-            </CardBody>
           </Card>
-        </GridItem>
       </GridContainer>
     </div>
   );
